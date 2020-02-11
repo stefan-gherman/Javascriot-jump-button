@@ -15,7 +15,7 @@ def return_second_page():
     answer = request.values.get('drop')
 
     print(question_header, answer)
-    return render_template('second_page.html', question_header= question_header, answer = answer);
+    return render_template('second_page.html', question_header= question_header, answer = answer)
 
 
 if __name__ == '__main__':
