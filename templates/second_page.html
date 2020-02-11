@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="{{url_for('static', filename = 'scripts/jump.js')}}" defer></script>
 </head>
 <body>
 {% if question_header %}
-    <h1>question_header</h1>
+    <h1>{{question_header}}</h1>
 {% endif %}
 {% if answer %}
 {% if answer == 'Yes' %}
@@ -16,7 +17,7 @@
 {% elif answer == 'No' %}
 <button id ="yes" data-correct="false">Yes</button>
 <br>
-<button id ="no">No</button>
+<button id ="no" data-correct="true">No</button>
 {% endif %}
 {% endif %}
 </body>
