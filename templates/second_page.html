@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% if question_header %}
+    <h1>question_header</h1>
+{% endif %}
+{% if answer %}
+{% if answer == 'Yes' %}
+<button id="yes" data-correct="true" >Yes</button>
+<br>
+<button id = "no" data-correct="false">No</button>
+{% elif answer == 'No' %}
+<button id ="yes" data-correct="false">Yes</button>
+<br>
+<button id ="no">No</button>
+{% endif %}
+{% endif %}
+</body>
+</html>
